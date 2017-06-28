@@ -1,7 +1,7 @@
 # react-doc-cn
-react 中文文档
+react 中文文档 (^15.6.1)
 
-## 快速入门
+## 快速入门(QUICK START)
 
 ## 高级指南(ADVANCED GUIDES)
 
