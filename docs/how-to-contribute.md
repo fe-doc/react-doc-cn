@@ -1,14 +1,14 @@
 React 是 Facebook 的第一批开源项目，目前社区活跃度很高，框架的更新也会应用到 [facebook.com](https://www.facebook.com) 网站中。我们致力于让 React 的社区贡献流程简单透明，尽管目前我们做的还不够好。希望这篇文档可以讲明 React 代码提交的流程，并解答一些你可能遇到的问题。
 
-### [核心价值观](https://code.facebook.com/codeofconduct)
+### [Code of Conduct](https://code.facebook.com/codeofconduct)
 
 我们希望项目的参与者遵守 Facebook 一直贯彻的核心价值观，请参考 [这里](https://code.facebook.com/codeofconduct)，这样你就知道什么是可以做的，什么是绝对不允许的。
 
-### 公开透明的开发流程
+### Open Development
 
 React 的代码提交一律在 [React GitHub 官方库](https://github.com/facebook/react) 上进行，团队与社区贡献者都需要开 Pull Request (合并请求)，代码审核的过程也是相同的。
 
-### 分支管理
+### Branch Organization
 
 我们需要尽力让 [`master` 分支](https://github.com/facebook/react/tree/master) 保持整洁，这个分支上的所有测试实例都是必须通过的。但为了尽快完成开发任务，我们可能会改一些 API，这些改动可能不会兼容你的项目。因此，我们推荐使用 [React 的最新稳定版](/react/downloads.html)。
 
