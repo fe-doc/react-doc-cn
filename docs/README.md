@@ -19,7 +19,14 @@ react 中文文档 (^15.6.1)
 - 与其他库整合
 
 ## 参考(REFERENCE)
-
+- React
+  - React.Component
+- ReactDOM
+- ReactDOMServer
+- DOM Elements
+- SyntheticEvent
+- Test Utilities
+- Shallow Renderer
 ## 贡献(CONTRIBUTING)
 
 - 如何贡献
