@@ -29,7 +29,7 @@ react 中文文档 (^15.6.1)
 - Shallow Renderer
 ## 贡献(CONTRIBUTING)
 
-- 如何贡献
-- 代码库概述
-- 实现说明
+- [如何贡献](how-to-contribute)
+- [代码库概述](codebase-overview)
+- [实现说明](implementation-notes)
 - 设计原则
