@@ -15,6 +15,7 @@ react 中文文档 (^15.6.1)
 - [状态提升](lifting-state-up)
 - [组合 vs 继承](composition-vs-inheritance)
 - [React 理念](thinking-in-react)
+
 ## 高级指南(ADVANCED GUIDES)
 
 - [深入 JSX](jsx-in-depth)
