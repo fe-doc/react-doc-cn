@@ -141,7 +141,7 @@ if(__DEV__){
 ```
 ## JSDoc
 
-一些颞部公共方法使用JSDoc annotations 注释：
+一些内部公共方法使用JSDoc 注释：
 
 ```
 /**
@@ -161,7 +161,7 @@ receiveComponent: function(nextText, transaction) {
 
 我们最近开始引入Flow 检测代码库。使用@flow 注释在许可头部的注解的文件正在被检测。
 
-我们接受推送请求adding Flow annotations to existing code。Flow 注解看上去像这样：
+我们接受pull requests [adding Flow annotations to existing code](https://github.com/facebook/react/pull/7600/files)。Flow 注解看上去像这样：
 ```
 ReactRef.detachRefs = function(
   instance: ReactInstance,
