@@ -27,36 +27,36 @@ var setInnerHTML = require('setInnerHTML')
 
 Haste 最初是为了像Facebook 这样的大型网站开发的。很容易将文件移动到不同的文件夹并导入它们，而不必担心相对路径。在任何编辑器中的模糊文件搜索总是能定位到正确的位置，由于全局唯一的名称。
 
-React 本身是从Facebook 代码库中提取出来的，使用Haste 是由于历史原因。在未来，我们将可能迁移React 到使用CommonJS 或ES 模块来同其它社区对齐。然而，这需要在Facebook 内部的基础设施的改变，所以它不太可能很快发生。
+React 本身是从 Facebook 代码库中提取出来的，使用Haste 是由于历史原因。在未来，我们将可能迁移React 到使用CommonJS 或ES 模块来同其它社区对齐。然而，这需要在Facebook 内部的基础设施的改变，所以它不太可能很快发生。
 
-Haste will make more sense to you if you remember a few rules:
+**Haste will make more sense to you if you remember a few rules:**
 
-所有的文件名在React 源代码中是唯一的。这就是为什么它们很冗余。
-当你添加一个新的文件，确保你包括了一个版权头（license header）。你可以从其它已经存在的文件中复制。版权头总是包含a line like this。修改它去匹配你创建的文件的名称。
-当引入的时候，不要使用相对路径。使用require('setInnerHTML') 而不是require('./setInnerHTML')。
-当我们编译React 为npm，一个脚本复制所有的模块到一个单一的扁平目录lib，并且为所有require() 的路径中使用./ 前置。这种方式Node，Browserify，Webpack 已经其它工具都能理解React 构建输出，而不会意识到Haste。
+- 所有的文件名在React 源代码中是唯一的。这就是为什么它们很冗余。
+- 当你添加一个新的文件，确保你包括了一个版权头（license header）。你可以从其它已经存在的文件中复制。版权头总是包含a line like this。修改它去匹配你创建的文件的名称。
+- 当引入的时候，不要使用相对路径。使用require('setInnerHTML') 而不是require('./setInnerHTML')。
 
-If you’re reading React source on GitHub and want to jump to a file, press “t”.
+当我们编译 React 为 npm，一个脚本复制所有的模块到一个单一的扁平目录lib，并且为所有require() 的路径中使用./ 前置。这种方式Node，Browserify，Webpack 已经其它工具都能理解React 构建输出，而不会意识到Haste。
+
+**If you’re reading React source on GitHub and want to jump to a file, press “t”.**
 
 这是GitHub 快捷键，在当前仓库（repo）中模糊文件名搜索匹配。开始键入你要查找的文件的名称，它将作为第一次匹配显示。
 
 ## External Dependencies
 
-React 几乎没有外部依赖。通常，一个require() 指出React 自己代码库中的一个文件。然而， 也有一些相对罕见的例外。
+React 几乎没有外部依赖。通常，一个require() 指出 React 自己代码库中的一个文件。然而， 也有一些相对罕见的例外。
 
-如果你看到一个require() 不能响应React 仓库中一个文件，你可以查看一个fbjs 的特殊仓库。例如，require('warning') 将解析warning module from fbjs。
+如果你看到一个require() 不能响应React 仓库中一个文件，你可以查看一个fbjs 的特殊仓库。例如，require('warning') 将解析 warning module from fbjs。
 
-fbjs repository 存在是因为React 共享一些性[Relay]库的工具，我们保持它们同步。我们不依赖NOde 生态系统的相同的小模块，因为我们想要Facebook 工程师必要时可以修改它们。fbjs 中没有工具被认为是公共的API，它们只是在Facebook 项目中例如React 中使用。
+fbjs repository 存在是因为React 和其他库共享一些通用的工具比如(Relay)，并且保持它们同步更新。我们不依赖 Node 生态系统的相同的小模块，因为我们想要Facebook 工程师必要时可以修改它们。fbjs 中没有工具被认为是公共的API，它们只是在Facebook 项目中例如React 中使用。
 
 ## Top-Level Folders
 
 克隆完[React repository] 之后，你将看到几个顶级文件夹：
 
-src 是React 源代码。如果你的改变是关于代码的，src 将花费你大量的时间。
-docs 是React 的文档网站。当你修改了API，请确保更新相关的Markdown 文件。
-examples 包含了几个使用不同构建设置的React 小例子。
-packages 包含了React 仓库中所有代码的元数据（像package.json），尽管如此，它们的源代码仍然位于src。
-build 是React 构建输出。它不再仓库中但是当你第一次构建 它，在你的React 副本中将会显示。
+- src 是React 源代码。如果你的改变是关于代码的，src 将花费你大量的时间。
+- docs 是React 的文档网站。当你修改了API，请确保更新相关的Markdown 文件。
+- fixtures 包含了几个使用不同构建设置的React 小例子。
+- packages 包含了React 仓库中所有代码的元数据（像package.json），尽管如此，它们的源代码仍然位于src.
 还有一些其它的顶级文件夹，但是它们通常用于工具，当你贡献代码时，通常不会遇到它们。
 
 ## Colocated Test
